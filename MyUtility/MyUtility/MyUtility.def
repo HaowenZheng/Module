@@ -4,3 +4,8 @@ LIBRARY
 
 EXPORTS
     ; Explicit exports can go here
+	Split_MultiChar
+	Split_Length
+	Split
+	LoadModule
+	DeleteModule

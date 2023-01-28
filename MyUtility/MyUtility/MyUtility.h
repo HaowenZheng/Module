@@ -9,6 +9,17 @@
 
 #include "resource.h"		// main symbols
 
+
+#include <thread>
+#include <array>
+#include <mutex>
+#include <memory>
+#include <iostream>
+#include <vector>
+#include <future>
+#include <unordered_map>
+#include <string>
+
 #ifdef  MYUTILITY_DLL_EXPORT
 #define MYUTILITY_FUNC_DEFINE(type) __declspec(dllexport) type WINAPI
 #define MYUTILITY_CLASS_DEFINE __declspec(dllexport)
@@ -20,7 +31,7 @@
 #define ForEachContain(contain, func) std::for_each(contain.begin(), contain.end(), func)
 #define FindContain(contain, func) std::find_if(contain.begin(), contain.end(), func)
 
-#define UNIQUE_LOCK(mtx) std::unique_lock<std::mutex> lcx;
+#define UNIQUE_LOCK(mtx) std::unique_lock<std::mutex> lcx(mtx);
 
 
 MYUTILITY_FUNC_DEFINE(std::vector<std::string>) Split(LPCTSTR str, TCHAR spChr, LPSTR mEOF = nullptr);

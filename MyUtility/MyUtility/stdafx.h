@@ -37,14 +37,6 @@
 #endif // _AFX_NO_AFXCMN_SUPPORT
 
 
-#include <thread>
-#include <array>
-#include <mutex>
-#include <memory>
-#include <iostream>
-#include <vector>
-#include <future>
-#include <unordered_map>
 
 
 #define MYUTILITY_DLL_EXPORT
