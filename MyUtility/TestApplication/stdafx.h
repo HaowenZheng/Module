@@ -33,7 +33,7 @@
 
 #include <afxcontrolbars.h>     // MFC support for ribbons and control bars
 
-
+#include "..//Interface/GloablInterface.h"
 
 #include "..//MyUtility/MyUtility.h"
 
@@ -42,6 +42,14 @@
 //#else
 //#pragma comment(lib,"../Release/MyUtility.lib")
 //#endif
+
+#include "../LogModule/LogModule.h"
+//#ifdef DEBUG
+//#pragma comment(lib,"../Debug/LogModule.lib")
+//#else
+//#pragma comment(lib,"../Release/LogModule.lib")
+//#endif
+
 
 
 

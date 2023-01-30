@@ -116,3 +116,41 @@ MYUTILITY_FUNC_DEFINE(void) DeleteModule(HINSTANCE dllInstance)
 		FreeLibrary(dllInstance);
 	}
 }
+
+MYUTILITY_FUNC_DEFINE(void) ForeachFile(const TCHAR * szFind, ForeachFileCallBack callBack, ConditionCallBack conditionAction, void * parameter)
+{
+	if (callBack == nullptr)
+		return;
+
+	WIN32_FIND_DATA findFileData;
+
+	std::string szPath = szFind;
+	szPath += "\\*.*";
+	HANDLE hFind = FindFirstFile(szPath.c_str(), &findFileData);
+	if (hFind == INVALID_HANDLE_VALUE)
+		return;
+
+	while (FindNextFile(hFind, &findFileData))
+	{
+		TCHAR fullFileName[512] = { 0 };
+		sprintf_s(fullFileName, sizeof(fullFileName), "%s\\%s", szFind, findFileData.cFileName);
+		std::string fileName = findFileData.cFileName;
+		const TCHAR *eXtName = strrchr(fileName.c_str(), '.');
+		if (fileName == "." || fileName == "..")
+			continue;
+
+		if (findFileData.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY)
+			ForeachFile(fullFileName, callBack, conditionAction, parameter);
+		else
+		{
+			FileInfo fileInfo;
+			fileInfo.FileFullName = fullFileName;
+			fileInfo.FileName = findFileData.cFileName;
+			fileInfo.FileSize = findFileData.nFileSizeLow;
+			fileInfo.ExtensionName = eXtName;
+			if (callBack != nullptr && conditionAction != nullptr && conditionAction(fileInfo) || (callBack != nullptr && conditionAction == nullptr))
+				callBack(fileInfo, parameter);
+		}
+	}
+	return;
+}

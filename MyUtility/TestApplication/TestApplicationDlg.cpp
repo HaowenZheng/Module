@@ -154,7 +154,8 @@ HCURSOR CTestApplicationDlg::OnQueryDragIcon()
 }
 
 
-
+//日志服务
+ILog * nLog = nullptr;
 void CTestApplicationDlg::OnBnClickedButton1()
 {
 	// TODO: Add your control notification handler code here
@@ -163,4 +164,12 @@ void CTestApplicationDlg::OnBnClickedButton1()
 
 	auto ret = Split(str.c_str(), ',');
 
+	nLog = GetLogInstance();
+
+	nLog->Trace("trace");
+	nLog->Debug("debug");
+	nLog->Info("info");
+	nLog->Warn("warn");
+	nLog->Error("error");
+	nLog->Fatal("fatal");
 }

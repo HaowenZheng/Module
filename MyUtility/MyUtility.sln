@@ -10,6 +10,13 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestApplication", "TestAppl
 		{4D0933D5-1355-49A7-9748-42918378F081} = {4D0933D5-1355-49A7-9748-42918378F081}
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Interface", "Interface", "{0194D873-4558-4724-A600-B1E9F24B9CF0}"
+	ProjectSection(SolutionItems) = preProject
+		Interface\GloablInterface.h = Interface\GloablInterface.h
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LogModule", "LogModule\LogModule.vcxproj", "{DCF3B298-3A30-4F1E-BF0E-A21203A9CE86}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -34,6 +41,14 @@ Global
 		{764CFA8F-267A-49C0-B210-E23FC2E9A045}.Release|x64.Build.0 = Release|x64
 		{764CFA8F-267A-49C0-B210-E23FC2E9A045}.Release|x86.ActiveCfg = Release|Win32
 		{764CFA8F-267A-49C0-B210-E23FC2E9A045}.Release|x86.Build.0 = Release|Win32
+		{DCF3B298-3A30-4F1E-BF0E-A21203A9CE86}.Debug|x64.ActiveCfg = Debug|x64
+		{DCF3B298-3A30-4F1E-BF0E-A21203A9CE86}.Debug|x64.Build.0 = Debug|x64
+		{DCF3B298-3A30-4F1E-BF0E-A21203A9CE86}.Debug|x86.ActiveCfg = Debug|Win32
+		{DCF3B298-3A30-4F1E-BF0E-A21203A9CE86}.Debug|x86.Build.0 = Debug|Win32
+		{DCF3B298-3A30-4F1E-BF0E-A21203A9CE86}.Release|x64.ActiveCfg = Release|x64
+		{DCF3B298-3A30-4F1E-BF0E-A21203A9CE86}.Release|x64.Build.0 = Release|x64
+		{DCF3B298-3A30-4F1E-BF0E-A21203A9CE86}.Release|x86.ActiveCfg = Release|Win32
+		{DCF3B298-3A30-4F1E-BF0E-A21203A9CE86}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
