@@ -159,6 +159,24 @@ ILog * nLog = nullptr;
 void CTestApplicationDlg::OnBnClickedButton1()
 {
 	// TODO: Add your control notification handler code here
+	int size = sizeof(WORD);
+	size = sizeof(DWORD);
+	size = sizeof(unsigned long);
+	size = sizeof(int);
+	size = sizeof(unsigned long long);
+	size = sizeof(POINTER_64_INT);
+	size = sizeof(__int64);
+
+	unsigned long InputLow = 2;
+	unsigned long InputHigh = 0;
+
+	std::bitset<64> value;
+	value = InputHigh << 32 | InputLow;
+
+	int offset = 2;
+	//unsigned char data = 255;
+	byte data = 255;
+	data &= ~(1 << offset);
 
 	std::string str = "1,2,3,4,5";
 

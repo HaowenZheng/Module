@@ -12,10 +12,14 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestApplication", "TestAppl
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Interface", "Interface", "{0194D873-4558-4724-A600-B1E9F24B9CF0}"
 	ProjectSection(SolutionItems) = preProject
+		Interface\bdaqctrl.h = Interface\bdaqctrl.h
 		Interface\GloablInterface.h = Interface\GloablInterface.h
+		Interface\IO_Interface.h = Interface\IO_Interface.h
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LogModule", "LogModule\LogModule.vcxproj", "{DCF3B298-3A30-4F1E-BF0E-A21203A9CE86}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IOModule", "IOModule\IOModule.vcxproj", "{A31FB95C-0E45-4E18-88D0-B86A18A261F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +53,14 @@ Global
 		{DCF3B298-3A30-4F1E-BF0E-A21203A9CE86}.Release|x64.Build.0 = Release|x64
 		{DCF3B298-3A30-4F1E-BF0E-A21203A9CE86}.Release|x86.ActiveCfg = Release|Win32
 		{DCF3B298-3A30-4F1E-BF0E-A21203A9CE86}.Release|x86.Build.0 = Release|Win32
+		{A31FB95C-0E45-4E18-88D0-B86A18A261F6}.Debug|x64.ActiveCfg = Debug|x64
+		{A31FB95C-0E45-4E18-88D0-B86A18A261F6}.Debug|x64.Build.0 = Debug|x64
+		{A31FB95C-0E45-4E18-88D0-B86A18A261F6}.Debug|x86.ActiveCfg = Debug|Win32
+		{A31FB95C-0E45-4E18-88D0-B86A18A261F6}.Debug|x86.Build.0 = Debug|Win32
+		{A31FB95C-0E45-4E18-88D0-B86A18A261F6}.Release|x64.ActiveCfg = Release|x64
+		{A31FB95C-0E45-4E18-88D0-B86A18A261F6}.Release|x64.Build.0 = Release|x64
+		{A31FB95C-0E45-4E18-88D0-B86A18A261F6}.Release|x86.ActiveCfg = Release|Win32
+		{A31FB95C-0E45-4E18-88D0-B86A18A261F6}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
